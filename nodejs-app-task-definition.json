@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "nodejs-app",
-            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/uno-nodejs-app",
+            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/nodejs-app",
             "cpu": 0,
             "portMappings": [
                 {
