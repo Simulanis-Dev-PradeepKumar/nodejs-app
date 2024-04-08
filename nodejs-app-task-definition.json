@@ -24,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/nodejs-app-task-defination",
+                    "awslogs-group": "/ecs/nodejs-app-logs",
                     "awslogs-region": "ap-south-1",
                     "awslogs-stream-prefix": "ecs"
                 },
