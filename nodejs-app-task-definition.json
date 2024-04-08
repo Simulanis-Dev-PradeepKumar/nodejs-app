@@ -79,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-04-04T18:43:27.219Z",
-    "registeredBy": "arn:aws:iam::551561343088:root",
+    "registeredAt": "April 08, 2024, 11:07 (UTC+05:30)",
+    "registeredBy": "arn:aws:iam::551561343088:user/nodejs-user",
     "tags": []
 }
