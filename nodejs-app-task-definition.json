@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:551561343088:task-definition/nodejs-app-task-defination:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:551561343088:task-definition/nodejs-app-task-definition:2",
     "containerDefinitions": [
         {
-            "name": "nodejs-app",
-            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/nodejs-app",
+            "name": "nodejs_app_ecr",
+            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/nodejs_app_ecr",
             "cpu": 0,
             "portMappings": [
                 {
@@ -79,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "April 08, 2024, 11:07 (UTC+05:30)",
+    "registeredAt": "April 16, 2024, 10:51 (UTC+05:30)",
     "registeredBy": "arn:aws:iam::551561343088:user/nodejs-user",
     "tags": []
 }
