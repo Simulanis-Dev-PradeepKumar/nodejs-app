@@ -5,7 +5,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: [ ubuntu-latest ]
     steps:
       - name: Checkout source
@@ -43,11 +43,9 @@ jobs:
           task-definition: nodejs-app-task-definition.json 
           container-name: nodejs_app_ecr
           image: ${{ steps.build-image.outputs.image }}  
-    jobs:
-    deploy: 
-     - name: Deploy Amazon ECS task definition
-       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
-        with:
+      - name: Deploy Amazon ECS task definition
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: nodejs-app-service
           cluster: DevCluster
