@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:551561343088:task-definition/nodejs-app-task-definition:2",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:551561343088:task-definition/nodejs-app-task-definition:3",
     "containerDefinitions": [
         {
             "name": "nodejs_app_ecr",
