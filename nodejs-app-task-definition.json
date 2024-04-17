@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:551561343088:task-definition/nodejs-app-task-definition:3",
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:551561343088:task-definition/nodejs-task-definition:1",
     "containerDefinitions": [
         {
-            "name": "nodejs_app_ecr",
-            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/nodejs_app_ecr",
+            "name": "nodejs_app_repo",
+            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/nodejs_app_repo:latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -33,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "nodejs-app-task-defination",
+    "family": "nodejs-app-defination",
     "executionRoleArn": "arn:aws:iam::551561343088:role/EcsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
