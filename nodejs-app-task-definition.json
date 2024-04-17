@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "nodejs_app_repo",
-            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/nodejs_app_repo:latest",
+            "image": "551561343088.dkr.ecr.ap-south-1.amazonaws.com/nodejs_app_repo",
             "cpu": 0,
             "portMappings": [
                 {
