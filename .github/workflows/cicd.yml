@@ -38,8 +38,8 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: nodejs-app-task-definition.json
-          container-name: nodejs_app_ecr
+          task-definition: nodejs-app-definition.json
+          container-name: nodejs_app_repo
           image: ${{ steps.build-image.outputs.image }}
         env:
          AWS_DEFAULT_REGION: ap-south-1
@@ -51,6 +51,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: nodejs-app-service
+          service: nodejs-service
           cluster: DevCluster
           wait-for-service-stability: true
