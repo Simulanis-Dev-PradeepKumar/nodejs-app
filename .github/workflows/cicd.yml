@@ -29,7 +29,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
-          REPOSITORY: nodejs_app_repo
+          REPOSITORY: nodejs_app
         run: |
           docker build -t $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
@@ -38,8 +38,8 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: nodejs-task-definition.json
-          container-name: nodejs_app_repo
+          task-definition: nodejs-app-task-definition.json
+          container-name: nodejs_app
           image: ${{ steps.build-image.outputs.image }}
         env:
          AWS_DEFAULT_REGION: ap-south-1
@@ -52,5 +52,5 @@ jobs:
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
           service: nodejs-service
-          cluster: DevCluster
+          cluster: dev_cluster
           wait-for-service-stability: true
